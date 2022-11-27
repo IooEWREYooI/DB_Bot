@@ -1,11 +1,18 @@
 package site.ewrey.DB_Bot;
 
 import io.restassured.RestAssured;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import static io.restassured.RestAssured.*;
 
 //@SpringBootTest
 class DbBotApplicationTests {
+
+	@AfterEach
+	void doAny(){
+		System.out.println("AFTER");
+	}
+
 	@Test
 	void succesSendMessage() {
 		RestAssured.baseURI = "https://api.telegram.org/bot5782481564:AAEIqdv8PKRi3mR88EXbImRxn9QwJbPFaQk";
